@@ -1,3 +1,10 @@
 .button {
   margin-top: 5%;
 }
+
+.search {
+  float: right;
+  width: 20%;
+  margin-top: 0;
+  
+}

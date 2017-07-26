@@ -16,7 +16,8 @@ $(document).ready(function(){
               <div class="type"</div>Type of Liquor: ${liquor.type}</a>
               <br><br>
               <div class="abv"</div>ABV: ${liquor.abv}</a>
-
+              <br><br>
+              <div class="like"</div>Like: ${liquor.like}</a>
             </div>
             <div class="card-action">
               <a class="waves-effect waves-light btn">Remove From List</a>

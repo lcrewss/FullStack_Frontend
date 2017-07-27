@@ -16,37 +16,37 @@
   </header>
   <body>
   <div class="row">
-    <form class="col s12">
+    <form id="submit-form" class="col s12" method="post" action="/">
       <div class="row">
         <div class="input-field col s6">
-          <input placeholder="Tito's, Jack Daniels, Malibu" id="name" type="text" class="validate">
+          <input name="name" placeholder="Tito's, Jack Daniels, Malibu" id="name" type="text" class="validate">
           <label for="name">Name of Liquor</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s6">
-          <input placeholder="Vodka, Gin, Run, Tequila" id="type" type="text" class="validate">
+          <input name="type" placeholder="Vodka, Gin, Run, Tequila" id="type" type="text" class="validate">
           <label for="type">Type of Liquor</label>
         </div>
       </div>
       <div class="abv">
         <div class="input-field col s6">
-          <input placeholder="35%, 40%, etc..." id="type" type="text" class="validate">
+          <input name="abv" placeholder="35%, 40%, etc..." id="abv" type="text" class="validate">
           <label for="abv">Alcohol by Volume</label>
         </div>
       </div>
       <br><br><br><br>
         <p>Would You Drink This Again?</p>
       <div class="radioButton">
-        <input type="radio" name="true" value="true">
+        <input name="true" id="true" type="radio" name="like" value="true">
         <label for="true">Yes</label>
       </div>
       <div class="radioButton">
-        <input type="radio" name="false" value="false">
+        <input name="false" id="false" type="radio" name="like" value="false">
         <label for="false">No</label>
       </div>
       <div class="button">
-        <a class="black btn">Submit</a>
+          <button class="submitButton" type="submit" name="submit">Submit</button>
       </div>
     </form>
   </div>

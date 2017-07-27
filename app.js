@@ -1,5 +1,40 @@
 $(document).ready(function(){
-  const baseURL = 'https://polar-mesa-16379.herokuapp.com/'
+  // const baseURL = 'https://polar-mesa-16379.herokuapp.com/'
+  const baseURL = 'http://localhost:3000/'
+  // const form = document.querySelector(".submitButton")
+  // form.addEventListener('click', submitForm)
+
+  $('.submitButton').click(submitForm)
+
+
+  function submitForm(event){
+    event.preventDefault()
+    const nameInput = document.querySelector('#name')
+    const typeInput = document.querySelector('#type')
+    const abvInput = document.querySelector('#abv')
+    const likeInput = document.querySelector('input[name=like]:checked')
+    const name = nameInput.value
+    const type = typeInput.value
+    const abv = abvInput.value
+    // const like = likeInput.value
+
+  var  post = {
+      name: name,
+      type: type,
+      abv: abv
+      // like: like
+    }
+  console.log(post)
+    $.post(baseURL,post)
+      .then(function(newPost) {
+        console.log(newPost);
+      })
+
+    nameInput.value = ""
+    typeInput.value = ""
+    abvInput.value = ""
+    // likeInput.value = ""
+}
 
   $.get(baseURL)
     .then(function(data){
@@ -28,4 +63,16 @@ $(document).ready(function(){
 
 
     })
+
+    // function createLiquor(post){
+    //   fetch(baseURL, {
+    //     method:'POST',
+    //     body: post,
+    //     headers: {'content-type': 'application/json'}
+    //   })
+    //   .then(function(data){
+    //     console.log(data);
+    //     data.json()
+    //   })
+    // }
 })

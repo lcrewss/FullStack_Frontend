@@ -1,6 +1,6 @@
 $(document).ready(function(){
-  const baseURL = 'https://polar-mesa-16379.herokuapp.com/'
-  // const baseURL = 'http://localhost:3000/'
+  // const baseURL = 'https://polar-mesa-16379.herokuapp.com/'
+  const baseURL = 'http://localhost:5000/'
   // const form = document.querySelector(".submitButton")
   // form.addEventListener('click', submitForm)
 
@@ -27,7 +27,7 @@ $(document).ready(function(){
   console.log(post)
     $.post(baseURL,post)
       .then(function(newPost) {
-        console.log(newPost);
+        location.href = '/index.html';
       })
 
     nameInput.value = ""
